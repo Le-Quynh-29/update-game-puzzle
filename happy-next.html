@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy win and next level</title>
+    <style>
+        canvas{
+            background-image: url("img/giphy.gif");
+            position: absolute;
+            left: 32%;
+            top: 150px;
+            width: 480px;
+            height: 480px;
+        }
+        div{
+            position: absolute;
+            left: 35%;
+            top: 0px
+        }
+        h1{
+            color: red;
+        }
+        button{
+            position: absolute;
+            left: 70%;
+            top: 580px;
+            width: 100px;
+            height: 50px;
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<canvas></canvas>
+<div>
+<h1>HAPPY YOU WIN LEVEL</h1>
+<h2>You are great!</h2>
+</div>
+<button type="button" onclick="nextLevel()">NEXT</button>
+<script>
+    function nextLevel(){
+        location.replace("endGame.html");
+    }
+</script>
+</body>
+</html>
+
+<audio controls autoplay  style="display: none">
+    <source src="audio/TiengVoTay-V.A.mp3" type="audio/ogg">
+    <source src="audio/TiengVoTay-V.A.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>

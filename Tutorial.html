@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial</title>
+    <style>
+        body{
+            background-image: url("img/Tutorial.jpg");
+        }
+        p {
+            position: absolute;
+        }
+        div{
+            border: 1px solid black;
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            left: 0%;
+            top:100px;
+            background-color: white
+        }
+        button{
+            position: absolute;
+            left: 0%;
+            top:50px
+        }
+    </style>
+</head>
+<body>
+<button type="button" onclick="exitgame()">EXIT</button>
+<div>
+    <h2 style="color: red; top:0px">Hướng dẫn:</h2>
+    <p style="top: 40px">Sử dụng chuột để di chuyển ảnh vào ô trống, ảnh gần nhất với ô trống sẽ di chuyển vào ô trống (2 ô trống trên đầu không có chức năng nhận ảnh di chuyển vào)</p>
+    <p style="top: 85px">1 số ví dụ như sau:</p>
+    <p style="top: 150px"><img src="img/Tutorial1.jpg" style="left:0%;display: inline-block">
+        <img src="img/Tutorial2.png" style="left:45%;display: inline-block">
+        <img src="img/Tutorial3.jpg" style="left:70%;display: inline-block"> </p>
+    <p style="top:320px">Nhấn "reset" để chơi lại</p>
+    <p style="top:340px">Khi di chuyển ảnh đúng với hình mẫu ấn nút "check" để kiểm tra đúng hay sai</p>
+    <p style="top:360px">Ấn "next" để qua level tiếp theo</p>
+</div>
+<script>
+    function exitgame(){
+        location.replace("index.html");
+    }
+</script>
+</body>
+</html>

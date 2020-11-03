@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle game</title>
+    <link rel="stylesheet" href="photo.css">
+
+</head>
+<style>
+    canvas#canvas {
+        position: absolute;
+        left: 35%;
+        top: 40px;
+    }
+    img{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 10%;
+        top:25px
+    }
+    button{
+        border: 2px solid black;
+        position: absolute;
+        top:600px;
+        width: 100px;
+        height: 20px;
+    }
+    div{
+        border: 2px solid black;
+        width: 150px;
+        height: 40px;
+        position: absolute;
+        left:11%;
+        top: 250px;
+        background-color: white;
+    }
+
+</style>
+<body>
+<div>
+   Time:
+    <span id="time" style="position: absolute;left: 40%;top:10px"></span>
+</div>
+<img src="img/anime1.jpg" style="display: inline-block; width: 200px;height: 200px;position: absolute;left: 10%;top:25px">
+<canvas id="canvas" style="display: inline-block"></canvas>
+
+<button type="button" onclick="reset()" style="left: 40%">RESET</button>
+<button type="button" onclick="checkWin()" style="left: 50%">check</button>
+
+<script type="text/javascript" src="piece.js"></script>
+<script type="text/javascript" src="const.js"></script>
+<script type="text/javascript" src="game.js"></script>
+<script>
+    let g = new game();
+    function checkWin(){
+        if(g.checkWin()){
+            location.replace("happy-next.html");
+        }
+        else{
+            alert('Chưa đúng. Hãy tiếp tục');
+        }
+    }
+    function reset(){
+        location.replace("puzzlegame.html");
+    }
+    function startTimer(duration, display) {
+        var start = Date.now(),
+            diff,
+            minutes,
+            seconds;
+        function timer() {
+            // get the number of seconds that have elapsed since
+            // startTimer() was called
+            diff = duration - (((Date.now() - start) / 1000) | 0);
+
+            // does the same job as parseInt truncates the float
+            minutes = (diff / 60) | 0;
+            seconds = (diff % 60) | 0;
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (diff == 0) {
+                // add one second so that the count down starts at the full duration
+                // example 05:00 not 04:59
+                location.replace("gameover.html");
+            }
+        };
+        // we don't want to wait a full second before the timer starts
+        timer();
+        setInterval(timer, 1000);
+    }
+
+    window.onload = function () {
+        var fiveMinutes = 60 * 1/2,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    }
+</script>
+
+</body>
+</html>
+
+<audio controls autoplay  style="display: none">
+    <source src="audio/Bai-hat-Duong-quyen-tinh-yeu.mp3" type="audio/ogg">
+    <source src="audio/Bai-hat-Duong-quyen-tinh-yeu.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>

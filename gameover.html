@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game over</title>
+    <style>
+        body{
+            background-image: url("img/game-over.jpg");
+        }
+        button{
+            position: absolute;
+            left: 65%;
+            top:  450px;
+            width: 150px;
+            height: 50px;
+            background-color: cyan;
+        }
+
+    </style>
+</head>
+<body>
+<button type="button" onclick="exitGame()">EXIT</button>
+<script>
+    function exitGame(){
+        location.replace("index.html");
+    }
+</script>
+</body>
+</html>
+
+<audio controls autoplay  style="display: none">
+    <source src="audio/MarioGameOver.mp3" type="audio/ogg">
+<!--    <source src="audio/MarioGameOver.mp3" type="audio/mpeg">-->
+    Your browser does not support the audio element.
+</audio>
