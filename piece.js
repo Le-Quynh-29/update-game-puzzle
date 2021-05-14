@@ -17,7 +17,7 @@ class piece {
         if (targetX > this.x){
             this.x +=5;
         } else if(targetX < this.x){
-            this.x-=5;
+            this.x -=5;
         }
         if (targetY > this.y){
             this.y+=5;

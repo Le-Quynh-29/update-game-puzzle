@@ -131,7 +131,7 @@ class game {
             }
         }
         //random game
-        for (let randomTime = 0; randomTime < 50; randomTime++) {
+        for (let randomTime = 0; randomTime < 100; randomTime++) {
             this.randomMove();
         }
 
@@ -141,7 +141,7 @@ class game {
         let flag = true;
         for (let i = 0; i < this.defaultPieces.length; i++) {
             for (let j = 0; j < this.defaultPieces.length; j++) {
-                if(this.defaultPieces[i][j] != this.pieces[i+1][j].id){
+                if(this.defaultPieces[i][j] !== this.pieces[i+1][j].id){
                     return false;
                 }
             }

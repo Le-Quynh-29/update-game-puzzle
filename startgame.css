@@ -1,3 +1,25 @@
 body{
     background-image: url("img/startGAME.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.box {
+    /*position: absolute;*/
+    /*top: 200px;*/
+    background: white center;
+    width: 1900px;
+    /*background-position: center;*/
+    text-align: center;
+    /*background-color: white;*/
+    font-size: 100px;
+    color: red;
+}
+button {
+    border: 2px solid white;
+    position: absolute;
+    /*padding-left: 100px;*/
+    /*width: 100px;*/
+    /*height: 30px;*/
+    top: 500px;
+    font-size: 30px;
 }
